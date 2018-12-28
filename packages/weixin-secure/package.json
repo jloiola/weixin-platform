@@ -1,0 +1,14 @@
+{
+  "name": "weixin-secure",
+  "version": "1.0.0",
+  "description": "secure/crypto lib for message passing/receiving with weixin",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "23.6.0"
+  }
+}

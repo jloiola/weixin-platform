@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "publish": {
+    "ignoreChanges": ["*.md"]
+  },  
+  "version": "independent"
+}
