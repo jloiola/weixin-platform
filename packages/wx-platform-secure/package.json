@@ -1,5 +1,5 @@
 {
-  "name": "weixin-secure",
+  "name": "wx-platform-secure",
   "version": "1.0.0",
   "description": "secure/crypto lib for message passing/receiving with weixin",
   "main": "index.js",

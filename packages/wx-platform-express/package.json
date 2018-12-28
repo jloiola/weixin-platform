@@ -1,7 +1,7 @@
 {
-  "name": "weixin-express-middleware",
+  "name": "wx-platform-express",
   "version": "1.0.0",
-  "description": "weixin express middleware",
+  "description": "weixin express app",
   "main": "index.js",
   "scripts": {
     "test": "jest"
