@@ -12,7 +12,7 @@ class Cryptography {
 
     this.appId = appId;
     this.aesEncodingKey = aesEncodingKey;
-    this.aesKey = new Buffer(`${this.aesEncodingKey}=`, 'base64');
+    this.aesKey = Buffer.from(`${this.aesEncodingKey}=`, 'base64');
     this.iv = this.aesKey.slice(0, 16);
   }
 
@@ -21,10 +21,10 @@ class Cryptography {
   encrypt(message, outputEncoding='base64') {
     var cipher, appIdBuffer, messageBuffer, messageLength, payloadBuffer, randomBytes;
     randomBytes = crypto.pseudoRandomBytes(16);
-    messageBuffer = new Buffer(message);
-    messageLength = new Buffer(4);
+    messageBuffer = Buffer.from(message);
+    messageLength = Buffer.from(4);
     messageLength.writeUInt32BE(messageBuffer.length, 0);
-    appIdBuffer = new Buffer(this.appId);
+    appIdBuffer = Buffer.from(this.appId);
     payloadBuffer = Buffer.concat([randomBytes, messageLength, messageBuffer, appIdBuffer]);
     cipher = crypto.createCipheriv('aes-256-cbc', this.aesKey, this.iv);
     cipher.setAutoPadding(true);
