@@ -1,0 +1,22 @@
+{
+  "name": "weixin-express-middleware",
+  "version": "1.0.0",
+  "description": "weixin express middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "23.6.0"
+  },
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "body-parser-xml": "1.1.0",
+    "debug": "4.1.1",
+    "express": "4.16.4",
+    "weixin-secure": "^1.0.0",
+    "xml2js": "0.4.19"
+  }
+}
