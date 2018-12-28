@@ -1,6 +1,10 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+require('body-parser-xml')(bodyParser)
+
 const app = express();
-const {parseXml, messageRouter} = require('./middleware');
+const {parseXml, MessageRouter} = require('./middleware');
+const {SignatureContext, Cryptography} = require('../weixin-secure');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -17,8 +21,8 @@ module.exports = ({token, appId, aesEncodingKey, routeDefintions}) => {
   const signatureCtx = new SignatureContext(token);
   const crypto = new Cryptography(appId, aesEncodingKey);
 
-  router.get('/', (req, res) => {
-    const [signature, timestamp, nonce] = req.query;
+  app.get('/', (req, res) => {
+    const {signature, timestamp, nonce} = req.query;
     const message = req.query.echostr;
     if(signatureCtx.verify(signature, timestamp, nonce, message)) {
       req.decryptedXml = crypto.decrypt(message);
@@ -30,10 +34,10 @@ module.exports = ({token, appId, aesEncodingKey, routeDefintions}) => {
   });
 
   // TODO maybe use compose
-  router.post('/',
+  app.post('/',
     // 1
     (req, res, next) => {
-      const [msg_signature, timestamp, nonce] = req.query;
+      const {msg_signature, timestamp, nonce} = req.query;
       const message = req.body.xml.Encrypt;
       if(signatureCtx.verify(msg_signature, timestamp, nonce, message)) {
         req.decryptedXml = crypto.decrypt(message);
@@ -45,7 +49,7 @@ module.exports = ({token, appId, aesEncodingKey, routeDefintions}) => {
     // 2
     parseXml,
     // 3
-    messageRouter(routeDefintions)
+    new MessageRouter(routeDefintions)
   );
 
   return app;

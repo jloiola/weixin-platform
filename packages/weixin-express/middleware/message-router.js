@@ -1,6 +1,5 @@
 const debug = require('debug');
-
-module.exports = class MessageRouter {
+class MessageRouter {
   constructor(routeDefintions=[]) {
     this.routes = routeDefintions;
     return this.middleware;
@@ -39,3 +38,5 @@ module.exports = class MessageRouter {
     }
   }
 };
+
+module.exports = MessageRouter;

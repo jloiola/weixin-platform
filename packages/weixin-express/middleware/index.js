@@ -1,4 +1,4 @@
 module.exports = {
   parseXml: require('./parse-xml'),
-  messageRouter: require('./message-router'),
+  MessageRouter: require('./message-router'),
 }
