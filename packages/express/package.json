@@ -1,7 +1,7 @@
 {
-  "name": "wx-platform-secure",
+  "name": "@weixin-platform/express",
   "version": "1.0.0",
-  "description": "secure/crypto lib for message passing/receiving with weixin",
+  "description": "weixin express app",
   "main": "index.js",
   "scripts": {
     "test": "jest",
