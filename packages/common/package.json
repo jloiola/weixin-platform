@@ -1,0 +1,25 @@
+{
+  "name": "@weixin-platform/common",
+  "version": "1.0.0",
+  "description": "common util libgs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "23.6.0",
+    "eslint": "5.11.1",
+    "eslint-config-google": "0.11.0",
+    "pre-commit": "1.2.2"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "ulog": "1.1.0"
+  }
+}

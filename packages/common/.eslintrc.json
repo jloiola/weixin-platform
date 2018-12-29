@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "google"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "amd": true,
+    "jest": true
+  },
+  "rules": {
+    "max-len": ["warn", 120, 2, {}]
+  }
+}
