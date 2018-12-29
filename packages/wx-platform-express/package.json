@@ -4,19 +4,22 @@
   "description": "weixin express app",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "23.6.0"
+    "jest": "23.6.0",
+    "eslint": "5.11.1",
+    "eslint-config-google": "0.11.0",
+    "pre-commit": "1.2.2"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "dependencies": {
-    "body-parser": "1.18.3",
-    "body-parser-xml": "1.1.0",
-    "debug": "4.1.1",
-    "express": "4.16.4",
-    "weixin-secure": "^1.0.0",
-    "xml2js": "0.4.19"
+    "ulog": "1.1.0"
   }
 }

@@ -22,7 +22,7 @@ it('should have a valid IV length', () => {
 
 // TODO: lots of fun 'testing' mocks/spyes etc to make this 'testable'
 it('should encrypt message', () => {
-    expect(true).toBe(true);
+  expect(true).toBe(true);
 });
 
 it('should decrypt message', () => {

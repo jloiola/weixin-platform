@@ -4,7 +4,7 @@ module.exports = (req, res, next) => {
   const parser = new xml2js.Parser({
     normalize: true,
     normalizeTags: false,
-    explicitArray: false
+    explicitArray: false,
   });
 
   return parser.parseString(req.decryptedXml, function(err, xml) {

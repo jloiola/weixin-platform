@@ -10,14 +10,14 @@ it('should throw when missing token', () => {
 
 // TODO re-org for shared context/vars
 it('should create signature', () => {
-    const signatureCtx = new SignatureContext('arandomtoken');
+  const signatureCtx = new SignatureContext('arandomtoken');
 
-    const timestamp = 1546024887;
-    const nonce = '0836e760a83d6e796c7f';
-    const message = 'weixin message';
+  const timestamp = 1546024887;
+  const nonce = '0836e760a83d6e796c7f';
+  const message = 'weixin message';
 
-    const signature = signatureCtx.create(timestamp, nonce, message)
-    expect(signature).toBe('12d1cbe0127713098482526286faaccef3556b1c');
+  const signature = signatureCtx.create(timestamp, nonce, message);
+  expect(signature).toBe('12d1cbe0127713098482526286faaccef3556b1c');
 });
 
 // TODO re-org for shared context/vars
