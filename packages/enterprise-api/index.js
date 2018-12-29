@@ -40,7 +40,7 @@ class EnterpriseApi {
     debug('token get');
     return this.http.get('/cgi-bin/gettoken', {params})
         .then(({data}) => {
-          debug(data)
+          debug(data);
           return data.access_token;
         });
   }
