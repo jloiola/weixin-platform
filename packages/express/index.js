@@ -4,7 +4,7 @@ require('body-parser-xml')(bodyParser);
 
 const app = express();
 const {parseXml, MessageRouter} = require('./middleware');
-const {SignatureContext, Cryptography} = require('../weixin-secure');
+const {SignatureContext, Cryptography} = require('@weixin-platform/secure');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
