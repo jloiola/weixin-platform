@@ -24,6 +24,7 @@
   ],
   "dependencies": {
     "@weixin-platform/secure": "0.8.2-alpha.0",
+    "body-parser-xml": "1.1.0",
     "ulog": "1.1.0"
   }
 }
