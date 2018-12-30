@@ -1,6 +1,6 @@
 {
   "name": "@weixin-platform/enterprise",
-  "version": "1.0.0",
+  "version": "0.8.0",
   "description": "enterprise api & functionality",
   "main": "index.js",
   "scripts": {
