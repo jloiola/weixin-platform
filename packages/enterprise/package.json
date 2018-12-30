@@ -1,7 +1,7 @@
 {
-  "name": "@weixin-platform/common",
+  "name": "@weixin-platform/enterprise",
   "version": "1.0.0",
-  "description": "common util libgs",
+  "description": "enterprise api & functionality",
   "main": "index.js",
   "scripts": {
     "test": "jest",

@@ -4,7 +4,7 @@ const {omitBy, isUndefined} = require('lodash');
 /**
  *
  */
-class UserApi {
+class User {
   /**
    *
    * @param {object} http
@@ -119,4 +119,4 @@ class UserApi {
   }
 };
 
-module.exports = UserApi;
+module.exports = User;
