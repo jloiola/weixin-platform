@@ -8,6 +8,9 @@
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
